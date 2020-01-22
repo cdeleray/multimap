@@ -262,7 +262,7 @@ public class MultiMap<K, V> implements Map<K, Collection<V>>, Serializable {
     return list;
   }
 
-  /** Returns or creates the set associated to the given key. */
+  /** Returns or creates the collection associated to the given key. */
   private Collection<V> getOrCreate(K key) {
     return map.computeIfAbsent(key, k -> collectionSupplier.get());
   }
